@@ -1,0 +1,73 @@
+﻿<Window x:Class="kontur_niirs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kontur_niirs"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:vm="clr-namespace:kontur_niirs.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Краткий">
+                <TabItem.DataContext>
+                    <vm:BriefViewModel/>
+                </TabItem.DataContext>
+                <GroupBox>
+                    <GroupBox.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Path = Summ}"></TextBlock>
+                            <CheckBox IsChecked="{Binding Path = Check}" Content="Делает неактивным GroupBox">
+                            </CheckBox>
+                        </StackPanel>
+                    </GroupBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding MultCommand}" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top">умножить</Button>
+                        <StackPanel>
+                            <TextBox x:Name="textBox1" Text="{Binding Path=X}" IsEnabled="{Binding Path=Check1}" Width="100"></TextBox>
+                            <TextBox Text="{Binding Path=Y}" IsEnabled="{Binding Path=Check1}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            
+            <TabItem Header="Подробный">
+                <TabItem.DataContext>
+                    <vm:DetailedViewModel/>
+                </TabItem.DataContext>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="{Binding Path=X, UpdateSourceTrigger=PropertyChanged}" Width="100" HorizontalAlignment="Left">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="PreviewKeyUp">
+                                    <i:InvokeCommandAction
+                                         Command="{Binding MultCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </TextBox>
+                        <TextBlock >x</TextBlock>
+                        <TextBox Text="{Binding Path=Y, UpdateSourceTrigger=PropertyChanged}" Width="100" HorizontalAlignment="Left">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="PreviewKeyUp">
+                                    <i:InvokeCommandAction
+                                         Command="{Binding MultCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </TextBox>
+                        <TextBlock>=</TextBlock>
+                        <TextBlock Text="{Binding Path=Summ}"></TextBlock>
+                    </StackPanel>
+                    <ListBox ItemsSource="{Binding Digits}" SelectedItem="{x:Null}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="18" Text="{Binding Path=Digit}" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
