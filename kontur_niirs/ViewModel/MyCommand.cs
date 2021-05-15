@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace kontur_niirs.ViewModel
 {
-    class MyCommand : ICommand
+    public class MyCommand : ICommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;

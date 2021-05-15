@@ -1,7 +1,6 @@
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\bin\Debug\kontur_niirs.exe.config
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\bin\Debug\kontur_niirs.exe
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\bin\Debug\kontur_niirs.pdb
-C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\obj\Debug\kontur_niirs.csprojAssemblyReference.cache
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\obj\Debug\App.g.cs
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\obj\Debug\kontur_niirs_MarkupCompile.cache
 C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs\obj\Debug\kontur_niirs_MarkupCompile.lref

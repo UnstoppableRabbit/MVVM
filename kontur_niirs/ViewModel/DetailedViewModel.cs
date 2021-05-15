@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace kontur_niirs.ViewModel
 {
-    class DetailedViewModel : INotifyPropertyChanged
+    public class DetailedViewModel : INotifyPropertyChanged
     {
         public DetailedViewModel()
         {
@@ -58,7 +58,7 @@ namespace kontur_niirs.ViewModel
                 return multCommand ??
                   (multCommand = new MyCommand(obj =>
                   {
-                      Summ = (X * Y).ToString();
+                      Summ = ((decimal)X * Y).ToString();
                       Digits.Clear();
                       foreach(var x in GetList(Summ))
                       {
@@ -75,10 +75,10 @@ namespace kontur_niirs.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
 
-        private static ObservableCollection<ListItem> GetList(string number){
+        public static ObservableCollection<ListItem> GetList(string number){
 
             ObservableCollection<ListItem> k = new ObservableCollection<ListItem>();
-            var s = ViewModel.BriefViewModel.GetString(uint.Parse(number));
+            var s = ViewModel.BriefViewModel.GetString(decimal.Parse(number));
             string[] words = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach(var i in words)

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace kontur_niirs.ViewModel
 {
-    class BriefViewModel : INotifyPropertyChanged
+    public class BriefViewModel : INotifyPropertyChanged
     { 
         private bool check;
         public bool Check
@@ -75,12 +75,14 @@ namespace kontur_niirs.ViewModel
                 return multCommand ??
                   (multCommand = new MyCommand(obj =>
                   {
-                      Summ = GetString(X * Y);
+                          Summ = GetString((decimal)X * (decimal)Y);
                   }, obj => Check1));
             }
         }
-        public static string GetString(uint number)
+        public static string GetString(decimal number)
         {
+            if (number > uint.MaxValue)
+                return "Слишком большое число";
             string fStr = "";
             uint[] digits = number.ToString().Select(c => (uint)char.GetNumericValue(c)).ToArray();
             foreach(var i in digits) {

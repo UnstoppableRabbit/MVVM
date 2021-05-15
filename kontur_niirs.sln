@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kontur_niirs", "kontur_niirs\kontur_niirs.csproj", "{03C86F3F-BD82-40D1-9621-B9D6FE897EEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4407846F-DBFA-4243-A920-10C781B0CD3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A8C7B4F8-FD11-4D86-AD7D-C05A45B84C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kontur_niirs.Tests", "kontur_niirs.Tests\kontur_niirs.Tests.csproj", "{1B035480-1F34-4922-9488-CDBE58D9CF1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{03C86F3F-BD82-40D1-9621-B9D6FE897EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C86F3F-BD82-40D1-9621-B9D6FE897EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C86F3F-BD82-40D1-9621-B9D6FE897EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B035480-1F34-4922-9488-CDBE58D9CF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B035480-1F34-4922-9488-CDBE58D9CF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B035480-1F34-4922-9488-CDBE58D9CF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B035480-1F34-4922-9488-CDBE58D9CF1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03C86F3F-BD82-40D1-9621-B9D6FE897EEB} = {4407846F-DBFA-4243-A920-10C781B0CD3E}
+		{1B035480-1F34-4922-9488-CDBE58D9CF1C} = {A8C7B4F8-FD11-4D86-AD7D-C05A45B84C4A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3EDC3ED-3920-40D1-8509-F5A4553DE6E6}

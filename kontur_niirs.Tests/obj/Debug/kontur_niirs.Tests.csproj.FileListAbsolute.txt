@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\kontur_niirs.Tests.dll
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\kontur_niirs.Tests.pdb
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\kontur_niirs.exe
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\kontur_niirs.pdb
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\kontur_niirs.exe.config
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\obj\Debug\kontur_niirs.Tests.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\obj\Debug\kontur_niirs.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\obj\Debug\kontur_niirs.Tests.csproj.CopyComplete
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\obj\Debug\kontur_niirs.Tests.dll
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\obj\Debug\kontur_niirs.Tests.pdb
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\nunit.framework.dll
+C:\Users\ASUS\source\repos\kontur_niirs\kontur_niirs.Tests\bin\Debug\nunit.framework.xml
